@@ -1,0 +1,130 @@
+$ColorRojo: red;
+$ColorBlanco: white;
+$ColorGris: #6C757D;
+$ColorNegro: Black;
+
+
+html{
+    scroll-behavior: smooth;
+  }
+  
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+  .envios{
+      background-color: $ColorRojo;
+      color: $ColorBlanco;
+      padding: 1.25px;
+      text-align: center;
+      font-size: 13px;
+      
+    }
+    
+  
+  
+  h1{
+      text-align: center;
+      font-size: 50px;
+  }
+
+  h3{
+    text-align: center;
+    font-size: 50px;
+}
+  
+  table{
+      text-align: center;
+      margin: 0 auto;
+  
+  }
+  
+  form{
+      text-align: center;
+  }
+  
+  label{
+      display: block;
+      font-size: 25px;
+  }
+  
+  .animacion{
+    background-image: url('./imagenes/animacionagua.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25%;
+    color: $ColorBlanco;
+
+    animation-name: colores;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  
+
+  @keyframes colores
+  {
+    0%,100%
+    {
+        filter: blur(5px);
+    }
+
+    50%
+    {
+        filter: blur(0px);
+    }
+  }
+  
+  .elegirnos
+  {
+    color: $ColorGris;
+    text-align: center;
+  }
+
+  .Contacto
+  {
+    color: $ColorNegro;
+    text-align: left;
+  }
+
+ 
+.ov-btn-slide-left {
+    background: $ColorBlanco; 
+    color: $ColorGris; 
+    border: 2px solid $ColorGris; 
+    padding: 8px 20px;
+    border-radius: 6px; 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .ov-btn-slide-left:hover {
+    color: $ColorBlanco; 
+  }
+  .ov-btn-slide-left::after {
+    content: "";
+    background: $ColorGris; 
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .ov-btn-slide-left:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
