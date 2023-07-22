@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 $ColorRojo: red;
 $ColorBlanco: white;
 $ColorGris: #6C757D;
@@ -11,8 +17,6 @@ html{
   
   body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
     }
     
   .envios{
@@ -34,6 +38,13 @@ html{
   h3{
     text-align: center;
     font-size: 50px;
+}
+
+.carousel-inner{
+    & img{
+        width: 100%;
+        height: auto;
+    }
 }
   
   table{
@@ -84,10 +95,10 @@ html{
     text-align: center;
   }
 
-  .Contacto
+  .contacto
   {
     color: $ColorNegro;
-    text-align: left;
+    text-align: center;
   }
 
  
@@ -127,4 +138,22 @@ html{
     bottom: 0;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
+  }
+
+
+  @mixin bg-color(){
+    background-color: #212529;
+    color: $ColorBlanco;
+  }
+
+  .navbar, footer{
+    @include bg-color();
+  }
+
+  footer a{
+    text-decoration: none;
+  }
+  
+  footer h6:hover{
+    text-decoration: underline;
   }
